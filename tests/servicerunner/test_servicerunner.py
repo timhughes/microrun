@@ -5,7 +5,7 @@ from servicerunner.servicerunner import ServiceManager
 @pytest.fixture(name='sm')
 def servicemanager():
 
-    return servicerunner.ServiceManager()
+    return ServiceManager()
 
 
 def test_servicemanager_can_create_services(sm):

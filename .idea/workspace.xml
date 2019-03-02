@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52743bbe-829f-468c-be7a-51179f435a20" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/servicerunner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/servicerunner.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/servicerunner/test_cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/servicerunner/test_cli.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tox.ini" beforeDir="false" afterPath="$PROJECT_DIR$/tox.ini" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tox/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,68 +19,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.4230499">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+                <state relative-caret-position="724">
+                  <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.local/share/virtualenvs/servicerunner-5fuxb13I/lib/python3.7/site-packages/setuptools/__init__.py">
+            <entry file="file://$USER_HOME$/.pyenv/versions/3.7.2/lib/python3.7/distutils/core.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="74">
-                  <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+                <state relative-caret-position="-1271">
+                  <caret line="56" column="9" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$USER_HOME$/.pyenv/versions/3.7.2/lib/python3.7/distutils/core.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1260" />
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.local/share/virtualenvs/servicerunner-5fuxb13I/lib/python3.7/distutils/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.local/share/virtualenvs/servicerunner-5fuxb13I/lib/python3.7/site-packages/mypy/typeshed/stdlib/2/SocketServer.pyi">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="660">
-                  <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.local/share/virtualenvs/servicerunner-5fuxb13I/lib/python3.7/site-packages/pip/_internal/build_env.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+                <state relative-caret-position="390">
+                  <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
                   <folding>
                     <element signature="e#1#14#0" expanded="true" />
                   </folding>
@@ -95,7 +56,7 @@
             <entry file="file://$PROJECT_DIR$/setup.cfg">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="465">
-                  <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+                  <caret line="31" selection-start-line="31" selection-end-line="31" />
                 </state>
               </provider>
             </entry>
@@ -109,10 +70,7 @@
             <entry file="file://$PROJECT_DIR$/tests/servicerunner/test_cli.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
-                  <caret line="9" column="29" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#89#102#0" expanded="true" />
-                  </folding>
+                  <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -132,7 +90,11 @@
           </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tox.ini">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="375">
+                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                </state>
+              </provider>
             </entry>
           </file>
         </leaf>
@@ -163,9 +125,11 @@
         <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/pytest.ini" />
         <option value="$PROJECT_DIR$/src/servicerunner/servicerunner.py" />
-        <option value="$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py" />
         <option value="$PROJECT_DIR$/setup.cfg" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/tests/servicerunner/test_cli.py" />
+        <option value="$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py" />
+        <option value="$PROJECT_DIR$/tox.ini" />
       </list>
     </option>
   </component>
@@ -241,34 +205,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Python tests.pytest in tests">
-    <configuration name="pytest for test_servicerunner.test_servicemanager_can_create_services" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="Tox" type="Tox" factoryName="Tox" temporary="true">
       <module name="servicerunner" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/servicerunner" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_servicerunner.test_servicemanager_can_create_services&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_servicerunner.test_sm_list_services" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="servicerunner" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/servicerunner" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_servicerunner.test_sm_list_services&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in tests" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -286,11 +231,14 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python tests.pytest in tests" />
+      <item itemvalue="Tox.Tox" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tox.Tox" />
         <item itemvalue="Python tests.pytest in tests" />
-        <item itemvalue="Python tests.pytest for test_servicerunner.test_sm_list_services" />
-        <item itemvalue="Python tests.pytest for test_servicerunner.test_servicemanager_can_create_services" />
       </list>
     </recent_temporary>
   </component>
@@ -344,21 +292,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_tests - 2019.03.02 at 20h 00m 57s.xml">
-      <configuration name="pytest in tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_tests - 2019.03.02 at 20h 02m 44s.xml">
-      <configuration name="pytest in tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_servicerunner_test_servicemanager_can_create_services - 2019.03.02 at 20h 03m 42s.xml">
-      <configuration name="pytest for test_servicerunner.test_servicemanager_can_create_services" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_servicerunner_test_sm_list_services - 2019.03.02 at 20h 03m 50s.xml">
-      <configuration name="pytest for test_servicerunner.test_sm_list_services" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_tests - 2019.03.02 at 20h 04m 00s.xml">
-      <configuration name="pytest in tests" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_tests - 2019.03.02 at 20h 04m 40s.xml">
       <configuration name="pytest in tests" configurationId="tests" />
     </history-entry>
@@ -374,6 +307,21 @@
     <history-entry file="pytest_in_tests - 2019.03.02 at 20h 07m 20s.xml">
       <configuration name="pytest in tests" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_tests - 2019.03.02 at 20h 43m 22s.xml">
+      <configuration name="pytest in tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_tests - 2019.03.02 at 20h 44m 33s.xml">
+      <configuration name="pytest in tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_tests - 2019.03.02 at 20h 53m 33s.xml">
+      <configuration name="pytest in tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_tests - 2019.03.02 at 20h 53m 43s.xml">
+      <configuration name="pytest in tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Tox - 2019.03.02 at 20h 55m 45s.xml">
+      <configuration name="Tox" configurationId="Tox" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
@@ -384,7 +332,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32979852" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32979852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -472,16 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servicerunner/servicerunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tox.ini">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servicerunner/cli.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -494,26 +432,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servicerunner/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/servicerunner/test_cli.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="e#89#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-          <folding>
-            <element signature="e#1#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pytest.ini">
       <provider selected="true" editor-type-id="text-editor">
@@ -532,7 +450,7 @@
     <entry file="file://$PROJECT_DIR$/setup.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -559,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/share/virtualenvs/servicerunner-5fuxb13I/lib/python3.7/site-packages/setuptools/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -575,7 +486,47 @@
     </entry>
     <entry file="file://$USER_HOME$/.pyenv/versions/3.7.2/lib/python3.7/distutils/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1260" />
+        <state relative-caret-position="-1271">
+          <caret line="56" column="9" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/servicerunner/test_cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servicerunner/servicerunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tox.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding>
+            <element signature="e#1#14#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
