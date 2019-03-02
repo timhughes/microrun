@@ -16,7 +16,7 @@ class ServiceManager:
         self.config = None
         self.loop = None
 
-    async def serve(self):
+    async def serve(self) -> None:
         if not self.config:
             logger.error("No config provided")
 
@@ -29,19 +29,19 @@ class ServiceManager:
         tasks = [service.start() for _, service in self.services.items()]
         await asyncio.wait(tasks)
 
-    async def killall(self):
+    async def killall(self) -> None:
         tasks = [service.stop() for _, service in self.services.items()]
         await asyncio.wait(tasks)
 
-    def list_services(self):
+    def list_services(self) -> None:
         print(self.services.keys())
 
     def add_service(self, service):
+
         if service.name not in self.services:
             self.services[service.name] = service
 
-    def create_service(self, name, config):
-
+    def create_service(self, name, config) -> None:
         service = BasicService()
         service.name = name
         service.workingdir = config['workingdir']
@@ -50,14 +50,13 @@ class ServiceManager:
         service.environment = config['environment']
         self.add_service(service)
 
-    def start_service(self, name):
+    def start_service(self, name) -> None:
         self.services[name].start()
 
-    def stop_service(self, name):
+    def stop_service(self, name) -> None:
         self.services[name].stop()
 
     # def service_action(self, name, action):
     #    '''make services extensible with more than start stop status'''
     #    self.services[name].action
-
 
