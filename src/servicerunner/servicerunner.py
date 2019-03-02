@@ -34,7 +34,7 @@ class ServiceManager:
         await asyncio.wait(tasks)
 
     def list_services(self) -> None:
-        print(self.services.keys())
+        return list(self.services.keys())
 
     def add_service(self, service):
 

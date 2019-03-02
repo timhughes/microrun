@@ -7,7 +7,7 @@ import pytest
 
 from click.testing import CliRunner
 
-from src.servicerunner import cli
+from servicerunner import cli
 
 
 @pytest.fixture
