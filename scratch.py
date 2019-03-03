@@ -1,6 +1,9 @@
 import asyncio
 import logging
 import os
+
+import aiohttp_jinja2
+import jinja2
 from aiohttp import web
 
 LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
@@ -9,11 +12,26 @@ logging.StreamHandler()
 logging.basicConfig(level=LOGLEVEL, format=FORMAT)
 
 
+templates = {
+    'index.html': "<html><body><h1>Welcome to {{ app['name'] }}</h1><p><a href='/pingers'>Pingers</a></p></body></html>",
+    'pinger_list.html': '''<html>
+    <body>
+    <h1>{{ app['name'] }} - Pingers</h1>
+    <ul>
+    {% for pinger in pingers %}
+    <li>{{ pinger }}</li>
+    {% endfor %}
+    </ul>
+    </body>
+    </html>''',
+}
+
+
 class Pinger:
 
     def __init__(self, address):
         self.address = address
-        self.logger = logging.getLogger("{}".format(self.__class__.__name__))
+        self.logger = logging.getLogger(self.__class__.__name__)
         self._process = None
         self._running = False
 
@@ -47,12 +65,20 @@ class Pinger:
         except asyncio.TimeoutError as e:
             self.logger.info("Timeout Error: {}".format(e))
 
+    @property
+    def status(self):
+        if self._running:
+            msg = 'running'
+        else:
+            msg = 'stopped'
+        return msg
+
 
 class MultiPinger:
 
     def __init__(self, address_list):
         self.pingers = {}
-        self.logger = logging.getLogger("{}".format(self.__class__.__name__))
+        self.logger = logging.getLogger(self.__class__.__name__)
 
         for address in address_list:
             self.pingers[address] = Pinger(address)
@@ -67,31 +93,84 @@ class MultiPinger:
             self.logger.info('Stopping: {}'.format(address))
             asyncio.create_task(pinger.stop())
 
-
-class WebServer(web.Application):
-
-
-    self.logger = logging.getLogger(__name__)
+    @property
+    def services_list(self):
+        return self.pingers.keys()
 
 
-    async def root(request):
-        text = "<a href='/upgrade'>Upgrade</a>"
-        logger.info(request.content_type)
+class WebApplication:
+
+    def __init__(self):
+        self.app = web.Application()
+        self.app['name'] = 'Sir Pingsalot'
+        self.logger = logging.getLogger(self.__class__.__name__)
+        self.app.add_routes([
+            web.get('/', self.root),
+            web.get('/upgrade', self.upgrade),
+            web.get('/pingers', self.pingers),
+        ])
+        self._runner = None
+        self.multiping = None
+
+        aiohttp_jinja2.setup(
+            self.app,
+            # loader=jinja2.FileSystemLoader('/path/to/templates/folder')
+            loader=jinja2.DictLoader(templates),
+        )
+
+    async def start(self):
+        self._runner = web.AppRunner(self.app)
+        await self._runner.setup()
+        site = web.TCPSite(self._runner, 'localhost', 8080)
+        await site.start()
+
+    async def stop(self):
+        await self._runner.cleanup()
+
+    # Move these to a views module
+
+    @aiohttp_jinja2.template('index.html')
+    async def root(self, request):
+        if request.method == 'GET':
+            return {}
+
+    async def upgrade(self, request):
+        text = "Upgrade Page"
+        self.logger.info(request.content_type)
         return web.Response(body=text, content_type='text/html')
 
+    @aiohttp_jinja2.template('pinger_list.html')
+    async def pingers(self, request):
+        if request.method == 'GET':
+            pingers = self.multiping.services_list
+            return {'pingers': pingers}
+        return {}
+
+
+class PingMaster:
+
+    def __init__(self):
+        self.logger = logging.getLogger(__name__)
+        self.multiping = None
+        self.webapp = None
+
+    def setup(self):
+        self.multiping = MultiPinger(['127.1.1.1', '127.2.2.2'])
+        self.webapp = WebApplication()
+        self.webapp.multiping = self.multiping
+
+    async def run(self):
+        await asyncio.gather(
+            self.multiping.start_all(),
+            self.webapp.start()
+        )
 
 
 def main():
-
-    multiping = MultiPinger(['127.1.1.1', '127.2.2.2'])
-    app = web.Application()
-    runner = web.AppRunner(app)
-    await runner.setup()
-    site = web.TCPSite(runner, 'localhost', 8080)
-    await site.start()
-
+    master = PingMaster()
+    master.setup()
     loop = asyncio.get_event_loop()
-    asyncio.ensure_future(multiping.start_all())
+    asyncio.ensure_future(master.run())
     loop.run_forever()
 
 
