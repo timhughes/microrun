@@ -4,6 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+servicerunner = {editable = true,path = "."}
 bumpversion  = "*"
 watchdog  = "*"
 flake8  = "*"
@@ -12,13 +13,16 @@ coverage  = "*"
 twine = "*"
 pytest = "*"
 pytest-runner = "*"
+pytest-cov='*'
 Sphinx = "*"
 mypy="*"
 pylint = "*"
-
+livereload = "*"
+pytest-asyncio="*"
 
 [packages]
 click = "*"
+aiohttp = "*"
 
 [requires]
 python_version = "3.7"
