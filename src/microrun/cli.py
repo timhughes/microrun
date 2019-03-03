@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Console script for servicerunner."""
+"""Console script for microrun."""
 import asyncio
 import logging
 import os
@@ -36,12 +36,12 @@ def coro(f):
 
 @click.group()
 @click.option('--config',
-              default='servicerunner.yaml',
+              default='microrun.yaml',
               type=click.Path(),
-              help='servicerunner.yaml config file.')
+              help='microrun.yaml config file.')
 @click.pass_context
 def main(ctx, config):
-    """Console script for servicerunner."""
+    """Console script for microrun."""
     ctx.obj = ServiceManager()
     with open(config, 'r') as stream:
         try:
@@ -54,7 +54,7 @@ def main(ctx, config):
 @pass_sm
 @coro
 def serve(sm):
-    """Starts the servicerunner"""
+    """Starts the microrun"""
     try:
         yield from sm.serve()
     except KeyboardInterrupt:

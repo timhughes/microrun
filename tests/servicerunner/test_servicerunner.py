@@ -1,7 +1,7 @@
 
 import pytest
 import asyncio
-from servicerunner.servicerunner import ServiceManager
+from microrun.servicerunner import ServiceManager
 
 
 @pytest.fixture(name='sm')

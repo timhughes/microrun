@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Top-level package for servicerunner."""
+"""Top-level package for microrun."""
 
 import logging
 from logging import NullHandler

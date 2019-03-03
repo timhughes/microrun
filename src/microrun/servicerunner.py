@@ -81,13 +81,6 @@ class Error(Exception):
     pass
 
 class UnknownServiceError(Error):
-    """Exception raised for when we rey and get a service that doesn't exist.
-
-    Attributes:
-        expression -- input expression in which the error occurred
-        message -- explanation of the error
-    """
-
     def __init__(self, expression, message):
         self.expression = expression
         self.message = message

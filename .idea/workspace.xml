@@ -6,22 +6,10 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52743bbe-829f-468c-be7a-51179f435a20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/thughes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/thughes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/servicerunner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/servicerunner.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicerunner.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servicerunner/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/servicerunner/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servicerunner/servicerunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/servicerunner/servicerunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tox.ini" beforeDir="false" afterPath="$PROJECT_DIR$/tox.ini" afterDir="false" />
-    </list>
-    <ignored path="$PROJECT_DIR$/.tox/" />
+    <list default="true" id="52743bbe-829f-468c-be7a-51179f435a20" name="Default Changelist" comment="" />
+    <manually-removed-from-ignored>
+      <directory path="$PROJECT_DIR$/.tox/" />
+    </manually-removed-from-ignored>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,16 +17,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.28255373">
+    <splitter split-orientation="horizontal" split-proportion="0.39190897">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/servicerunner/service.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/microrun/service.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="53" selection-start-line="53" selection-end-line="58" />
+                <state relative-caret-position="273">
+                  <caret line="69" column="5" selection-start-line="69" selection-end-line="76" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/microrun/servicerunner.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="172">
+                  <caret line="86" selection-start-line="86" selection-end-line="86" />
+                  <folding>
+                    <element signature="e#44#58#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -56,11 +56,29 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scratch.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="86" column="25" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="25" />
+                <state relative-caret-position="105">
+                  <caret line="28" selection-start-line="28" selection-end-line="28" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/.local/share/virtualenvs/servicerunner-5fuxb13I/lib/python3.7/site-packages/aiohttp/web_app.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="206">
+                  <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Pipfile">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" selection-start-line="22" selection-end-line="22" />
                 </state>
               </provider>
             </entry>
@@ -90,9 +108,9 @@
         <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/src/servicerunner/service.py" />
         <option value="$PROJECT_DIR$/tests/servicerunner/test_servicerunner.py" />
-        <option value="$PROJECT_DIR$/src/servicerunner/servicerunner.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/scratch.py" />
+        <option value="$PROJECT_DIR$/src/servicerunner/servicerunner.py" />
       </list>
     </option>
   </component>
@@ -101,6 +119,7 @@
     <option name="width" value="1390" />
     <option name="height" value="1007" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <showExcludedFiles Scope="false" ProjectPane="false" />
@@ -112,19 +131,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="servicerunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servicerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="microrun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microrun" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="servicerunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servicerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="microrun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="microrun" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="servicerunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servicerunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="servicerunner" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -135,7 +148,16 @@
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="microrun" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="microrun" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -156,7 +178,7 @@
   </component>
   <component name="RunManager" selected="Python.scratch">
     <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="servicerunner" />
+      <module name="microrun" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -177,7 +199,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tox" type="Tox" factoryName="Tox" temporary="true">
-      <module name="servicerunner" />
+      <module name="microrun" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -188,7 +210,7 @@
       <method v="2" />
     </configuration>
     <configuration name="pytest in tests" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="servicerunner" />
+      <module name="microrun" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -203,9 +225,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.scratch" />
       <item itemvalue="Python tests.pytest in tests" />
       <item itemvalue="Tox.Tox" />
-      <item itemvalue="Python.scratch" />
     </list>
     <recent_temporary>
       <list>
@@ -227,19 +249,19 @@
       <option name="presentableId" value="Default" />
       <updated>1551551259066</updated>
     </task>
-    <task id="LOCAL-00001" summary="Cleanup and move to pycharm">
-      <created>1551552798898</created>
+    <task id="LOCAL-00001" summary="Testing ideas in scratch.py">
+      <created>1551624963691</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1551552798899</updated>
+      <updated>1551624963691</updated>
     </task>
-    <task id="LOCAL-00002" summary="Cleanup and move to pycharm">
-      <created>1551552841427</created>
+    <task id="LOCAL-00002" summary="Much better version of scratch">
+      <created>1551638972592</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1551552841427</updated>
+      <updated>1551638972592</updated>
     </task>
     <task id="LOCAL-00003" summary="Cleanup and move to pycharm">
       <created>1551554205433</created>
@@ -269,6 +291,7 @@
       <option name="project" value="LOCAL" />
       <updated>1551563800097</updated>
     </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -305,14 +328,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4994698" visible="true" weight="0.16605166" />
       <window_info id="Structure" order="1" sideWeight="0.50053024" side_tool="true" weight="0.16605166" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49973643" visible="true" weight="0.38282079" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.66489923" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49973643" weight="0.3107105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -347,6 +369,11 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Testing ideas in scratch.py" />
+    <MESSAGE value="Much better version of scratch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Much better version of scratch" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/servicerunner.iml" />
     <entry file="file://$USER_HOME$/.pyenv/versions/3.7.2/lib/python3.7/distutils/core.py">
@@ -356,17 +383,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servicerunner/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/microrun/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servicerunner/servicerunner.py,cover" />
-    <entry file="file://$PROJECT_DIR$/setup.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/servicerunner/test_cli.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -376,13 +396,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pipfile.lock">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tox.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
@@ -398,20 +411,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servicerunner/cli.py">
+    <entry file="file://$PROJECT_DIR$/src/microrun/cli.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="14" selection-start-line="14" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servicerunner/servicerunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding>
-            <element signature="e#44#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,22 +438,22 @@
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servicerunner/service.py">
+    <entry file="file://$PROJECT_DIR$/tox.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="53" selection-start-line="53" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/share/virtualenvs/servicerunner-5fuxb13I/lib/python3.7/site-packages/aiohttp/web_app.py">
+    <entry file="file://$PROJECT_DIR$/setup.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="88" column="23" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="23" />
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servicerunner.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Pipfile">
       <provider selected="true" editor-type-id="text-editor">
@@ -459,12 +462,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scratch.py">
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/servicerunner-5fuxb13I/lib/python3.7/site-packages/aiohttp/web_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="86" column="25" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="25" />
+        <state relative-caret-position="206">
+          <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microrun/service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="69" column="5" selection-start-line="69" selection-end-line="76" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/microrun/servicerunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#44#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
