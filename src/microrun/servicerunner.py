@@ -4,39 +4,54 @@
 import asyncio
 import logging
 
+from microrun.errors import UnknownServiceError
 from .service import BasicService
 
 logger = logging.getLogger(__name__)
 
 
-class ServiceManager:
+class MultiServiceManager:
 
     def __init__(self):
         self.services = {}
+        self.logger = logging.getLogger(self.__class__.__name__)
         self.config = None
-        self.loop = None
 
-    async def serve(self) -> None:
-        if not self.config:
-            logger.error("No config provided")
-
-        logger.debug('Serving')
-
-        if 'services' in self.config:
-            for name, config in self.config['services'].items():
-                self.create_service(name, config)
-
-        for _, service in self.services.items():
-            asyncio.create_task(service.start())
-
-        # await asyncio.wait(tasks)
-
-    async def killall(self) -> None:
-        tasks = [service.stop() for _, service in self.services.items()]
-        await asyncio.wait(tasks)
-
-    def list_services(self) -> list:
+    @property
+    def services_list(self):
         return list(self.services.keys())
+
+    async def start_all(self):
+        for service_name in self.services.keys():
+            await self.start_service(service_name)
+
+    async def stop_all(self):
+        for service_name in self.services.keys():
+            await self.stop_service(service_name)
+
+    async def start_service(self, name):
+        self.logger.info('Starting: {}'.format(name))
+        if name in self.services:
+            asyncio.create_task(self.services[name].start())
+        else:
+            raise UnknownServiceError
+
+    async def stop_service(self, name):
+        self.logger.info('Stopping: {}'.format(name))
+        if name in self.services:
+            asyncio.create_task(self.services[name].stop())
+        else:
+            raise UnknownServiceError
+
+    def create_service(self, name, config):
+        service = BasicService()
+        service.name = name
+        service.config(**config)
+        self._add_service(service)
+
+    def _add_service(self, service):
+        if service.name not in self.services:
+            self.services[service.name] = service
 
     def get_service(self, name):
         if name in self.services:
@@ -44,43 +59,7 @@ class ServiceManager:
         else:
             raise UnknownServiceError
 
-    def add_service(self, service):
-
-        if service.name not in self.services:
-            self.services[service.name] = service
-
-    def create_service(self, name, config):
-        service = BasicService()
-        service.name = name
-        service.workingdir = config['workingdir']
-        service.displayname = config['displayname']
-        service.command = config['command']
-        service.environment = config['environment']
-        self.add_service(service)
-
-    async def start_service(self, name)-> bool:
-        if name in self.services:
-            yield self.services[name].start()
-        else:
-            raise UnknownServiceError
-
-    def stop_service(self, name) -> bool:
-        if name in self.services:
-            self.services[name].stop()
-        else:
-            raise UnknownServiceError
-
-    # def service_action(self, name, action):
-    #    '''make services extensible with more than start stop status'''
-    #    self.services[name].action
-
-
-
-class Error(Exception):
-    """Base class for exceptions in this module."""
-    pass
-
-class UnknownServiceError(Error):
-    def __init__(self, expression, message):
-        self.expression = expression
-        self.message = message
+    def configure(self, config):
+        if 'services' in config:
+            for name, config in config['services'].items():
+                self.create_service(name, config)

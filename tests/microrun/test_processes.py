@@ -1,13 +1,12 @@
 
 import pytest
 import asyncio
-from microrun.servicerunner import ServiceManager
+from microrun.servicerunner import MultiServiceManager
 
 
 @pytest.fixture(name='sm')
 def servicemanager():
-
-    return ServiceManager()
+    return MultiServiceManager()
 
 
 def test_servicemanager_can_create_services(sm):
@@ -34,7 +33,7 @@ def test_servicemanager_list_services(sm):
             'environment': {}
         }
     )
-    services = sm.list_services()
+    services = sm.services_list
     assert services == ['dummyservice']
 
 
@@ -45,7 +44,7 @@ async def test_start_and_stop_a_service(sm):
         {
             'workingdir': '/',
             'displayname': 'Dummy Service',
-            'command': ['sleep 5'],
+            'command': ['sleep 10'],
             'environment': {}
         }
     )
@@ -56,8 +55,3 @@ async def test_start_and_stop_a_service(sm):
     assert service.status == 'running'
     sm.stop_service('dummyservice')
     assert service.status == 'stopped'
-
-
-
-def test_start_and_stop_multiple_services(sm):
-    assert False

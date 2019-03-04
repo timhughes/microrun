@@ -1,0 +1,30 @@
+
+services:
+  #  wherearewe:
+  #    command:
+  #      - pwd
+  #    workingdir: ./kafka_2.11-2.1.0/
+  #    displayname: WhereAreWe
+  #    environment: {}
+  kafka:
+    command:
+    - bin/kafka-server-start.sh
+    - config/server.properties
+    workingdir: ./kafka_2.11-2.1.0/
+    displayname: Kafka
+    environment: {}
+  mongo:
+    command:
+    - mongod
+    - --dbpath
+    - ./mongo_data/
+    workingdir: '.'
+    displayname: Mongo Database
+    environment: {}
+  zookeeper:
+    command:
+    - bin/zookeeper-server-start.sh
+    - config/zookeeper.properties
+    workingdir: ./kafka_2.11-2.1.0/
+    displayname: Zookeeper
+    environment: {}

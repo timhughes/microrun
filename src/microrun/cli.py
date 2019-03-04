@@ -10,28 +10,15 @@ from functools import update_wrapper
 import click
 import yaml
 
-from .servicerunner import ServiceManager
+from microrun.main import MicroRun
+from .servicerunner import MultiServiceManager
 
 LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-
 logging.StreamHandler()
 logging.basicConfig(level=LOGLEVEL, format=FORMAT)
 
-pass_sm = click.make_pass_decorator(ServiceManager)
-
-
-def coro(f):
-    func = asyncio.coroutine(f)
-
-    def wrapper(*args, **kwargs):
-        loop = asyncio.get_event_loop()
-        try:
-            return loop.run_until_complete(f(*args, **kwargs))
-        except KeyboardInterrupt:
-            raise
-
-    return update_wrapper(wrapper, func)
+pass_sm = click.make_pass_decorator(MicroRun)
 
 
 @click.group()
@@ -42,7 +29,7 @@ def coro(f):
 @click.pass_context
 def main(ctx, config):
     """Console script for microrun."""
-    ctx.obj = ServiceManager()
+    ctx.obj = MicroRun()
     with open(config, 'r') as stream:
         try:
             ctx.obj.config = yaml.load(stream)
@@ -52,13 +39,13 @@ def main(ctx, config):
 
 @main.command()
 @pass_sm
-@coro
 def serve(sm):
     """Starts the microrun"""
-    try:
-        yield from sm.serve()
-    except KeyboardInterrupt:
-        yield from sm.killall()
+    sm.setup()
+    loop = asyncio.get_event_loop()
+    asyncio.ensure_future(sm.run())
+    loop.run_forever()
+
 
 if __name__ == "__main__":
     sys.exit(main())  # pragma: no cover

@@ -4,7 +4,15 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 
 
-class AbstractService(ABC):
+class ServiceAbstract(ABC):
+
+    def __init__(self, **kwargs):
+        """Initialize"""
+        self.name = None
+        self._displayname = None
+        self._workingdir = None
+        self._environment = {}
+        self._command = []
 
 
     @abstractmethod
@@ -19,53 +27,58 @@ class AbstractService(ABC):
     def status(self):
         pass
 
+    def config(self, **kwargs):
+        config = kwargs.copy()
+        if 'command' in config:
+            self._command = config['command']
+        if 'displayname' in config:
+            self._displayname = config['displayname']
+        if 'workingdir' in config:
+            self._workingdir = config['workingdir']
+        if 'environment' in config:
+            self._environment = config['environment']
 
-class BasicService(AbstractService):
+    @property
+    def command(self):
+        return self._command
 
-    def __init__(self):
-        self.last_exitcode = None
-        self.last_exittime = datetime.now()
-        self.name = None
-        self.displayname = None
-        self.workingdir = None
-        self.environment = {}
-        self.command = []
+
+class BasicService(ServiceAbstract):
+
+    def __init__(self, **kwargs):
+        super(ServiceAbstract).__init__(**kwargs)
+        self.logger = logging.getLogger(self.__class__.__name__)
         self._process = None
         self._running = False
-        self.logger = logging.getLogger("{}".format(self.__class__.__name__))
 
     async def start(self):
-        self.logger = logging.getLogger("{}".format(self.name))
-        self.logger.info('Starting "{}":  {}'.format(self.name, ' '.join(self.command)))
-        kwargs = {'cwd': self.workingdir, 'env': self.environment}
+        extra_args = {'cwd': self._workingdir, 'env': self._environment}
+        self.logger.info('Starting "{}" with environment of {}'.format(' '.join(self._command), extra_args))
         self._process = await asyncio.create_subprocess_shell(
-            ' '.join(self.command),
+            ' '.join(self._command),
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
-            **kwargs
+            **extra_args,
         )
-        self.logger.info('Started "{}": pid={}'.format(self.name, self._process.pid))
+        self.logger.info('Started "{}" {}'.format(self._command, self._process.pid))
         self._running = True
         await asyncio.gather(
-            self.log(self._process.stdout),
-            self.log(self._process.stderr, logging.ERROR)
+            self._log(self._process.stdout),
+            self._log(self._process.stderr, logging.ERROR)
         )
-
         await self._process.wait()
         self._running = False
-        self.last_exitcode = self._process.returncode
-        self.last_exittime = datetime.now()
-        self.log_exit()
-
-
-    def log_exit(self):
-        self.logger.info('Exited "{}": pid={}'.format(self.name, self._process.pid))
+        self.logger.info('Exited "{}" with errorcode: {}'.format(
+            self._command, self._process.returncode))
 
     async def stop(self):
-        await self._process.terminate()
-
-    async def kill(self):
-        await self._process.kill()
+        try:
+            await asyncio.wait_for(self._process.terminate(), timeout=5.0)
+            self.logger.info('Exited "ping {}" with errorcode: {}'.format(
+                self._command, self._process.returncode))
+        except asyncio.TimeoutError as e:
+            self.logger.info("Timeout Error: {}".format(e))
+            await asyncio.wait_for(self._process.kill(), timeout=5.0)
 
     @property
     def status(self):
@@ -75,6 +88,15 @@ class BasicService(AbstractService):
             msg = 'stopped'
         return msg
 
-    async def log(self, stream, level=logging.INFO):
+    async def _log(self, stream, level=logging.INFO):
         async for line in stream:
             self.logger.log(level, line.decode().strip())
+
+    def __repr__(self):
+        r = {
+            'status': self.status,
+            'pid': self._process.pid,
+            'command': self.command,
+        }
+        return r
+
