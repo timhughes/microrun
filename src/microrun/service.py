@@ -52,6 +52,7 @@ class BasicService(ServiceAbstract):
         self._running = False
 
     async def start(self):
+        self.logger = logging.getLogger("{}".format(self.name))
         extra_args = {'cwd': self._workingdir, 'env': self._environment}
         self.logger.info('Starting "{}" with environment of {}'.format(' '.join(self._command), extra_args))
         self._process = await asyncio.create_subprocess_shell(
@@ -74,7 +75,7 @@ class BasicService(ServiceAbstract):
     async def stop(self):
         try:
             await asyncio.wait_for(self._process.terminate(), timeout=5.0)
-            self.logger.info('Exited "ping {}" with errorcode: {}'.format(
+            self.logger.info('Exited "{}" with errorcode: {}'.format(
                 self._command, self._process.returncode))
         except asyncio.TimeoutError as e:
             self.logger.info("Timeout Error: {}".format(e))

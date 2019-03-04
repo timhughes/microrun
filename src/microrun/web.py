@@ -16,9 +16,9 @@ logging.basicConfig(level=LOGLEVEL, format=FORMAT)
 
 templates = {
     'index.html': "<html><body><h1>Welcome to {{ app['name'] }}</h1><p><a href='/services'>Services</a></p></body></html>",
-    'pinger_list.html': '''<html>
+    'service_list.html': '''<html>
     <body>
-    <h1>{{ app['name'] }} - Pingers</h1>
+    <h1>{{ app['name'] }} - Services</h1>
     <ul>
     {% for service, data in services.items() %}
     <li>{{ service }} - {% if data['status'] == 'running' %}<a href='/services/{{ service }}/stop'>Stop</a>{% else %}<a href='/services/{{ service }}/start'>Start</a>{% endif %}</li>
@@ -72,7 +72,7 @@ class WebApplication:
         if request.method == 'GET':
             return {}
 
-    @aiohttp_jinja2.template('pinger_list.html')
+    @aiohttp_jinja2.template('service_list.html')
     async def services(self, request):
         if request.method == 'GET':
             services = {}
