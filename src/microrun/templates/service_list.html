@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ app['name'] }} - Services</h1>
+<ul>
+    {% for service, data in services.items() %}
+    <li>{{ service }} - {% if data['status'] == 'running' %}<a href='/services/{{ service }}/stop'>Stop</a>{% else %}<a
+        href='/services/{{ service }}/start'>Start</a>{% endif %}
+    </li>
+    <li>
+    <ul>
+        {% for k, v in data.items() %}
+        <li>{{ k }}:{{ v }}</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    </li>
+</ul>
+</body>
+</html>
+

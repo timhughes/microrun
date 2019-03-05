@@ -6,11 +6,15 @@ import aiohttp_jinja2
 import jinja2
 from aiohttp import web
 
+from openapi import spec
+
+from openapi.spec import op, OpenApi, OpenApiSpec
+from openapi.spec.path import ApiPath
+
 LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
 FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 logging.StreamHandler()
 logging.basicConfig(level=LOGLEVEL, format=FORMAT)
-
 
 templates = {
     'index.html': "<html><body><h1>Welcome to {{ app['name'] }}</h1><p><a href='/pingers'>Pingers</a></p></body></html>",
@@ -147,6 +151,63 @@ class WebApplication:
         return {}
 
 
+class OpenApiApplication:
+
+    def __init__(self):
+        self.logger = logging.getLogger(self.__class__.__name__)
+        self.app = web.Application()
+        spec.setup_app(self.app)
+
+        self.app.router.add_routes([
+            web.view('/', ApiIndex)
+        ])
+
+        openapi=dict(
+              title='A REST API',
+        )
+
+        self.app['spec'] = OpenApiSpec(
+            OpenApi(**(openapi or {})),
+            allowed_tags=['Index'],
+            validate_docs=True
+        )
+
+    @op()
+    async def thing(self):
+        """
+        ---
+        summary: Get Index
+        description: Returns the data for the index page
+        responses:
+            200:
+                description: Index page
+        """
+        return {}
+
+class ApiIndex(ApiPath):
+    """
+    ---
+    summary: Index page data
+    description: Index page description
+    tags:
+        - name: Index
+          description: Simple description
+
+    """
+
+    @op()
+    async def index(self):
+        """
+        ---
+        summary: Get Index
+        description: Returns the data for the index page
+        responses:
+            200:
+                description: Index page
+        """
+        return {}
+
+
 class PingMaster:
 
     def __init__(self):
@@ -158,6 +219,9 @@ class PingMaster:
         self.multiping = MultiPinger(['127.1.1.1', '127.2.2.2'])
         self.webapp = WebApplication()
         self.webapp.multiping = self.multiping
+
+        apiapp = OpenApiApplication()
+        self.webapp.app.add_subapp('/api/v1', apiapp.app)
 
     async def run(self):
         await asyncio.gather(
