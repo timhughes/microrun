@@ -11,6 +11,7 @@ from .views import Index, Services
 #  https://tbone.readthedocs.io/en/latest/source/resources.html#hateoas
 #  https://flask-ripozo.readthedocs.io/en/latest/flask_tutorial.html
 
+
 class OpenApiApplication:
 
     def __init__(self):

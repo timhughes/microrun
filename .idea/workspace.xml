@@ -7,20 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52743bbe-829f-468c-be7a-51179f435a20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/microrun/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/microrun/api/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/microrun/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/thughes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/thughes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/microrun.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/microrun.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/microrun/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/microrun/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/microrun/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/microrun/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/microrun/api/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/microrun/api/api.py" afterDir="false" />
     </list>
     <manually-removed-from-ignored>
       <directory path="$PROJECT_DIR$/.tox/" />
@@ -75,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/microrun/api/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state relative-caret-position="165">
+              <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -94,15 +81,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pipfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/microrun/web.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="318">
@@ -115,19 +93,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/microrun/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/microrun/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="1110">
+              <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
               <folding>
                 <element signature="e#1#28#0" expanded="true" />
               </folding>
@@ -136,8 +105,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/microrun/api/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$USER_HOME$/.local/share/virtualenvs/microrun-q5N2mbBN/lib/python3.7/site-packages/openapi/spec/path.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.local/share/virtualenvs/microrun-q5N2mbBN/lib/python3.7/site-packages/aiohttp/web_urldispatcher.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="881" column="17" selection-start-line="881" selection-start-column="17" selection-end-line="881" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.local/share/virtualenvs/microrun-q5N2mbBN/lib/python3.7/site-packages/aiohttp/abc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-506">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -363,7 +354,7 @@
       <updated>1551551259066</updated>
       <workItem from="1551725273559" duration="340000" />
       <workItem from="1551725633171" duration="49000" />
-      <workItem from="1551725703169" duration="13206000" />
+      <workItem from="1551725703169" duration="14202000" />
     </task>
     <task id="LOCAL-00001" summary="Testing ideas in scratch.py">
       <created>1551624963691</created>
@@ -386,12 +377,12 @@
       <option name="project" value="LOCAL" />
       <updated>1551642244935</updated>
     </task>
-    <task id="LOCAL-00004" summary="Cleanup and move to pycharm">
-      <created>1551554240503</created>
+    <task id="LOCAL-00004" summary="Moving to json api">
+      <created>1551750713091</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1551554240503</updated>
+      <updated>1551750713091</updated>
     </task>
     <task id="LOCAL-00005" summary="testing">
       <created>1551557614981</created>
@@ -407,7 +398,7 @@
       <option name="project" value="LOCAL" />
       <updated>1551563800097</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -443,7 +434,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13595000" />
+    <option name="totallyTimeSpent" value="14591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
@@ -500,7 +491,8 @@
     <MESSAGE value="Testing ideas in scratch.py" />
     <MESSAGE value="Much better version of scratch" />
     <MESSAGE value="rename to microrun" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename to microrun" />
+    <MESSAGE value="Moving to json api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moving to json api" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/servicerunner.iml" />
@@ -769,10 +761,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/microrun-q5N2mbBN/lib/python3.7/site-packages/openapi/spec/path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/microrun-q5N2mbBN/lib/python3.7/site-packages/aiohttp/web_urldispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="881" column="17" selection-start-line="881" selection-start-column="17" selection-end-line="881" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/microrun-q5N2mbBN/lib/python3.7/site-packages/aiohttp/abc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-506">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/microrun/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="1110">
+          <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
           <folding>
             <element signature="e#1#28#0" expanded="true" />
           </folding>
@@ -781,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/microrun/api/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state relative-caret-position="165">
+          <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
