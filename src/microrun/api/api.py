@@ -7,6 +7,9 @@ from openapi.spec import OpenApi, OpenApiSpec, op
 
 from .views import Index, Services
 
+# TODO hataeos    https://stackoverflow.com/a/682052
+#  https://tbone.readthedocs.io/en/latest/source/resources.html#hateoas
+#  https://flask-ripozo.readthedocs.io/en/latest/flask_tutorial.html
 
 class OpenApiApplication:
 
