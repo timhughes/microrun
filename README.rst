@@ -22,11 +22,15 @@ Service runner for development environments'
 * Free software: GNU General Public License v3
 * Documentation: https://microrun.readthedocs.io.
 
+Todo
+----
+* [ ] make service stop/start a toggle so that we cannot start twice
+* [ ] package microrun-ui to `sys.prefix + '/share/microrun-ui'`
 
 Features
 --------
 
-* TODO
+* TODO:
 
 
 
