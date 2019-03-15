@@ -14,7 +14,7 @@ def test_servicemanager_can_create_services(sm):
     sm.create_service(
         'dummyservice',
         {
-            'workingdir': '/dev/null',
+            'workingdir': '/tmp/',
             'displayname': 'Dummy Service',
             'command': 'true',
             'environment': {}
@@ -27,7 +27,7 @@ def test_servicemanager_list_services(sm):
     sm.create_service(
         'dummyservice',
         {
-            'workingdir': '/',
+            'workingdir': '/tmp/',
             'displayname': 'Dummy Service',
             'command': 'true',
             'environment': {}

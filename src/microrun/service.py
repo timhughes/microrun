@@ -95,9 +95,13 @@ class BasicService(ServiceAbstract):
 
     def __repr__(self):
         r = {
+            'name': self.name,
             'status': self.status,
             'pid': self._process.pid,
             'command': self.command,
+            'environment': self._environment,
+            'displayname': self._displayname,
+            'workingdir': self._workingdir,
         }
         return r
 

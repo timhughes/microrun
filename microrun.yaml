@@ -1,30 +1,21 @@
 
 services:
-  #  wherearewe:
-  #    command:
-  #      - pwd
-  #    workingdir: ./kafka_2.11-2.1.0/
-  #    displayname: WhereAreWe
-  #    environment: {}
   kafka:
     command:
-    - bin/kafka-server-start.sh
-    - config/server.properties
-    workingdir: ./kafka_2.11-2.1.0/
+    - ping
+    - 127.0.0.1
+    workingdir: /tmp
     displayname: Kafka
     environment: {}
   mongo:
     command:
-    - mongod
-    - --dbpath
-    - ./mongo_data/
+    - 'sleep 70'
     workingdir: '.'
     displayname: Mongo Database
     environment: {}
   zookeeper:
     command:
-    - bin/zookeeper-server-start.sh
-    - config/zookeeper.properties
-    workingdir: ./kafka_2.11-2.1.0/
+    - 'less /var/log/datadog/agent.log'
+    workingdir: /var/lib/
     displayname: Zookeeper
     environment: {}

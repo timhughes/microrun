@@ -2,6 +2,7 @@
   <dictionary name="thughes">
     <words>
       <w>apiapp</w>
+      <w>displayname</w>
       <w>jinja</w>
       <w>microrun</w>
       <w>multiping</w>
@@ -10,6 +11,7 @@
       <w>pingers</w>
       <w>servicerunner</w>
       <w>webserver</w>
+      <w>workingdir</w>
     </words>
   </dictionary>
 </component>

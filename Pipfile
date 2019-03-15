@@ -19,12 +19,14 @@ mypy="*"
 pylint = "*"
 livereload = "*"
 pytest-asyncio="*"
+microrun = {editable = true,path = "."}
 
 [packages]
 click = "*"
 aiohttp = "*"
 aiohttp-jinja2 = "*"
 aio-openapi="*"
+aiohttp-cors = "*"
 
 [requires]
 python_version = "3.7"

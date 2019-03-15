@@ -1,9 +1,9 @@
-
 from openapi.spec import op
 from openapi.spec.path import ApiPath
+import aiohttp_cors
 
 
-class Index(ApiPath):
+class Index(ApiPath, aiohttp_cors.CorsViewMixin):
     """
     ---
     summary: Index page data
@@ -27,7 +27,7 @@ class Index(ApiPath):
         return self.json_response({})
 
 
-class Services(ApiPath):
+class Services(ApiPath, aiohttp_cors.CorsViewMixin):
     """
     ---
     summary: Services
@@ -49,9 +49,13 @@ class Services(ApiPath):
         """
 
         msm = self.request.app['msm']
+        services = {}
         service_names = msm.services_list
-        return self.json_response(service_names)
+        for name in service_names:
+            service = msm.get_service(name)
+            services[name] = service.__repr__()
 
+        return self.json_response(services)
 
     @op()
     async def post(self):
@@ -75,7 +79,3 @@ class Services(ApiPath):
         #
 
         return self.json_response({'result': 'success'})
-
-
-
-

@@ -4,6 +4,7 @@ import logging
 from aiohttp import web
 from openapi import spec
 from openapi.spec import OpenApi, OpenApiSpec, op
+import aiohttp_cors
 
 from .views import Index, Services
 
@@ -33,3 +34,13 @@ class OpenApiApplication:
             allowed_tags=['Index'],
             validate_docs=True
         )
+        cors = aiohttp_cors.setup(self.app, defaults={
+            "*": aiohttp_cors.ResourceOptions(
+                allow_credentials=True,
+                expose_headers="*",
+                allow_headers="*",
+            )
+        })
+        for route in list(self.app.router.routes()):
+            cors.add(route)
+
