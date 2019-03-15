@@ -20,7 +20,7 @@ Service runner for development environments'
 
 
 * Free software: GNU General Public License v3
-* Documentation: https://servicerunner.readthedocs.io.
+* Documentation: https://microrun.readthedocs.io.
 
 
 Features
